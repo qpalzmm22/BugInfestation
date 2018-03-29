@@ -4,7 +4,7 @@ import java.util.*;	//import to user Scanner();
 /**
  * This class implements bug Infestation. 
  * Given two values(house volume, start population of roaches),
- * we can find how long it takes given growth rate of roachse.
+ * we can find how long it takes given growth rate of roaches.
  * This class contains three methods(setInitialState(), calcBugWeek(), printResult())
  * @author qpalzmm22
  *
@@ -24,8 +24,7 @@ public class BugInfestation {				// class for calculating how many weeks bugs ta
 	 * The setInitialState takes two inputs from user and set each of them to 
 	 * houseVolume and startPopulation
 	 */
-	
-	void setInitialState() {			// This method gets two inputs from user (houseVolume and startPopulation) 
+	public void setInitialState() {			// This method gets two inputs from user (houseVolume and startPopulation) 
 		Scanner keyboard = new Scanner(System.in);	// initialize Scanner to use nextDouble()
 			
 		System.out.print("Enter the total volume of your house in cubin feet: ");	// ask user for houseVolume
@@ -40,13 +39,11 @@ public class BugInfestation {				// class for calculating how many weeks bugs ta
 		
 		keyboard.close();	// close keyboard to prevent information leaking
 	}
-	
 	/**
 	 * The calcBugWeek calculates how many weeks it takes for bugs to fill the
-	 * house 
+	 * house
 	 */
-	
-	void calcBugWeek() {							// this method increase bug until Volume of the bugs exeed volume of the house
+	public void calcBugWeek() {							// this method increase bug until Volume of the bugs exeed volume of the house
 		while(totalBugVolume < houseVolume) {		// check if the houseVolume is smaller than total Bug Volume 
 			newBugs = population * GROWTH_RATE;		// new bugs are created by growth_rate much
 			newBugVolume = newBugs * ONE_BUG_VOLUME;// the size of new bugs
@@ -60,8 +57,7 @@ public class BugInfestation {				// class for calculating how many weeks bugs ta
 	 * The printResult prints the whole statements of how many bugs are in
 	 * how big of a house. Also, the final number of the roaches and how many weeks it took for bugs to take over the house
 	 */
-	
-	void printResult() {
+	public void printResult() {
 		System.out.println("Starting with a roach population of " + (int)startPopulation);		// print given population
 		System.out.println("and a house with a volume of " + houseVolume + " cubic feet.");		// print given volume
 		
